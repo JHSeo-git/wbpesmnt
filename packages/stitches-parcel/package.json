@@ -1,11 +1,7 @@
 {
-  "name": "@wbpesmnt/stitches",
+  "name": "@wbpesmnt/stitches-parcel",
   "version": "0.0.0",
-  "sideEffects": false,
   "source": "./index.ts",
-  "imports": {
-    "@wbpesmnt/design-token": "workspace:*"
-  },
   "exports": {
     ".": {
       "import": "./lib/config.mjs",
@@ -13,19 +9,20 @@
     },
     "./package.json": "./package.json"
   },
-  "main": "./lib/config.js",
   "types": "./lib/index.d.ts",
+  "main": "./lib/config.js",
   "module": "./lib/config.mjs",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "license": "MIT",
   "files": [
     "lib",
     "src"
   ],
   "scripts": {
-    "dts": "tsc --emitDeclarationOnly --skipLibCheck",
-    "prebuild": "rimraf lib",
-    "build": "yarn build:parcel",
-    "build:parcel": "parcel build",
+    "clean": "yarn rimraf ./lib && echo '  🧹 Cleaned'",
+    "build": "yarn clean && parcel build",
     "prepack": "yarn build"
   },
   "dependencies": {
@@ -37,7 +34,6 @@
     "react": "^16.8 || ^17.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.5",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-modules": "^0.1.5",
@@ -45,7 +41,8 @@
     "@stitches/react": "^1.2.6",
     "@wbpesmnt/tsconfig": "workspace:*",
     "babel-plugin-polished": "^1.1.0",
-    "concurrently": "^7.0.0",
-    "parcel": "^2.3.2"
+    "parcel": "^2.3.2",
+    "rimraf": "*",
+    "typescript": "*"
   }
 }

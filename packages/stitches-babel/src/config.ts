@@ -3,16 +3,7 @@ import { createStitches } from '@stitches/react';
 import type { PropertyValue, VariantProps, CSS } from '@stitches/react';
 import { colors, fonts } from '@wbpesmnt/design-token';
 
-const {
-  styled,
-  getCssText,
-  keyframes,
-  theme: lightTheme,
-  createTheme,
-  globalCss,
-  config,
-  css,
-} = createStitches({
+const stitches = createStitches({
   media: {
     /**
      * @see https://tailwindcss.com/docs/responsive-design#overview
@@ -238,12 +229,12 @@ const {
   },
 });
 
-const darkTheme = createTheme('dark-theme', {
+const darkTheme = stitches.createTheme('dark-theme', {
   colors: { ...colors.dark.scale, ...colors.dark.sementic },
 });
 
-export const lightThemeClassName = lightTheme.className;
+export default stitches;
+export const lightThemeClassName = stitches.theme.className;
 export const darkThemeClassName = darkTheme.className;
-export { globalCss, styled, getCssText, keyframes, config, css };
-export type StitchesCSS = CSS<typeof config>;
+export type StitchesCSS = CSS<typeof stitches.config>;
 export type { VariantProps };

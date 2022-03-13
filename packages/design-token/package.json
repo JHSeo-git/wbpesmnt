@@ -2,29 +2,37 @@
   "name": "@wbpesmnt/design-token",
   "version": "0.0.0",
   "source": "./src/index.ts",
-  "main": "./src/index.ts",
   "exports": {
     ".": {
-      "require": "./lib/index.cjs",
+      "require": "./lib/index.js",
       "import": "./lib/index.mjs"
     },
     "./package.json": "./package.json"
   },
   "types": "./lib/index.d.ts",
-  "scripts": {
-    "prebuild": "rimraf lib",
-    "build": "yarn build:nano",
-    "build:nano": "nanobundle build"
+  "main": "./lib/index.js",
+  "module": "./lib/index.mjs",
+  "engines": {
+    "node": ">=14.0.0"
   },
+  "license": "MIT",
   "files": [
     "lib",
     "src"
   ],
+  "scripts": {
+    "clean": "yarn rimraf ./lib && echo '  🧹 Cleaned'",
+    "build": "yarn clean && yarn build:nano",
+    "build:nano": "nanobundle build"
+  },
   "dependencies": {
     "@radix-ui/colors": "^0.1.8"
   },
   "devDependencies": {
     "@wbpesmnt/tsconfig": "workspace:*",
-    "nanobundle": "^0.0.27"
+    "microbundle": "^0.14.2",
+    "nanobundle": "^0.0.27",
+    "rimraf": "*",
+    "typescript": "*"
   }
 }
