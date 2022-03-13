@@ -1,0 +1,30 @@
+{
+  "name": "@wbpesmnt/design-token",
+  "version": "0.0.0",
+  "source": "./src/index.ts",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": {
+      "require": "./lib/index.cjs",
+      "import": "./lib/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "prebuild": "rimraf lib",
+    "build": "yarn build:nano",
+    "build:nano": "nanobundle build"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "dependencies": {
+    "@radix-ui/colors": "^0.1.8"
+  },
+  "devDependencies": {
+    "@wbpesmnt/tsconfig": "workspace:*",
+    "nanobundle": "^0.0.27"
+  }
+}

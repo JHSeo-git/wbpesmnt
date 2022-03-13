@@ -1,0 +1,51 @@
+{
+  "name": "@wbpesmnt/stitches",
+  "version": "0.0.0",
+  "sideEffects": false,
+  "source": "./index.ts",
+  "imports": {
+    "@wbpesmnt/design-token": "workspace:*"
+  },
+  "exports": {
+    ".": {
+      "import": "./lib/config.mjs",
+      "require": "./lib/config.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./lib/config.js",
+  "types": "./lib/index.d.ts",
+  "module": "./lib/config.mjs",
+  "license": "MIT",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "dts": "tsc --emitDeclarationOnly --skipLibCheck",
+    "prebuild": "rimraf lib",
+    "build": "yarn build:parcel",
+    "build:parcel": "parcel build",
+    "prepack": "yarn build"
+  },
+  "dependencies": {
+    "@wbpesmnt/design-token": "workspace:*",
+    "polished": "^4.1.3"
+  },
+  "peerDependencies": {
+    "@stitches/react": ">=1.0.0",
+    "react": "^16.8 || ^17.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-modules": "^0.1.5",
+    "@babel/preset-typescript": "^7.16.7",
+    "@stitches/react": "^1.2.6",
+    "@wbpesmnt/tsconfig": "workspace:*",
+    "babel-plugin-polished": "^1.1.0",
+    "concurrently": "^7.0.0",
+    "parcel": "^2.3.2"
+  }
+}
