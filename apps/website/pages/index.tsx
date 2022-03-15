@@ -1,8 +1,8 @@
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
 import NextLink from 'next/link';
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
   return (
@@ -24,28 +24,28 @@ const Home: NextPage = () => {
 
         <div className={styles.grid}>
           <NextLink href="/design-token" passHref>
-          <a className={styles.card}>
-            <h2>Design Token &rarr;</h2>
-            <p>Build with @wbpesmnt/design-token.</p>
-          </a>          
+            <a className={styles.card}>
+              <h2>Design Token &rarr;</h2>
+              <p>Build with @wbpesmnt/design-token.</p>
+            </a>
           </NextLink>
           <NextLink href="/stitches/babel" passHref>
-          <a className={styles.card}>
-            <h2>Stitches Babel &rarr;</h2>
-            <p>Build with @wbpesmnt/stitches-babel.</p>
-          </a>          
+            <a className={styles.card}>
+              <h2>Stitches Babel &rarr;</h2>
+              <p>Build with @wbpesmnt/stitches-babel.</p>
+            </a>
           </NextLink>
           <NextLink href="/stitches/nanobundle" passHref>
-          <a className={styles.card}>
-            <h2>Stitches Nanobundle &rarr;</h2>
-            <p>Build with @wbpesmnt/stitches-nano.</p>
-          </a>          
+            <a className={styles.card}>
+              <h2>Stitches Nanobundle &rarr;</h2>
+              <p>Build with @wbpesmnt/stitches-nano.</p>
+            </a>
           </NextLink>
           <NextLink href="/stitches/parcel" passHref>
-          <a className={styles.card}>
-            <h2>Stitches Parcel &rarr;</h2>
-            <p>Build with @wbpesmnt/design-parcel.</p>
-          </a>          
+            <a className={styles.card}>
+              <h2>Stitches Parcel &rarr;</h2>
+              <p>Build with @wbpesmnt/design-parcel.</p>
+            </a>
           </NextLink>
         </div>
       </main>
@@ -63,7 +63,7 @@ const Home: NextPage = () => {
         </a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

@@ -1,7 +1,7 @@
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
 
 const StitchesBabelPage: NextPage = () => {
-  return <div>Stitches Babel Page</div>
-}
+  return <div>Stitches Babel Page</div>;
+};
 
 export default StitchesBabelPage;
