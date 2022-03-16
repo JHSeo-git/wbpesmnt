@@ -1,2 +1,7 @@
-.yarn/*             linguist-vendored
-.pnp.js             binary linguist-vendored
+/.yarn/**               linguist-vendored
+/.pnp.*                 binary linguist-generated
+
+/.vscode/*.json         linguist-language=JSON5
+
+/packages/*/bin/**/*.js linguist-generated
+/packages/*/lib/*.js    linguist-generated
