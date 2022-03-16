@@ -22,8 +22,9 @@
   ],
   "scripts": {
     "clean": "yarn rimraf ./lib && echo '  🧹 Cleaned'",
-    "build": "yarn clean && yarn build:nano",
-    "build:nano": "nanobundle build"
+    "build": "yarn clean && yarn build:nano && yarn build:css",
+    "build:nano": "nanobundle build",
+    "build:css": "node ./scripts/build-css-modules.js"
   },
   "dependencies": {
     "@radix-ui/colors": "^0.1.8"
