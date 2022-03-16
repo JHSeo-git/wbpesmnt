@@ -1,4 +1,2 @@
-.yarn/              linguist-vendored
-.yarn/sdks          linguist-vendored
-.yarn/releases      linguist-vendored
+.yarn/*             linguist-vendored
 .pnp.js             binary linguist-vendored
