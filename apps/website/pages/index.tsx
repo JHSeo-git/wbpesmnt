@@ -29,24 +29,6 @@ const Home: NextPage = () => {
               <p>Build with @wbpesmnt/design-token.</p>
             </a>
           </NextLink>
-          <NextLink href="/stitches/babel" passHref>
-            <a className={styles.card}>
-              <h2>Stitches Babel &rarr;</h2>
-              <p>Build with @wbpesmnt/stitches-babel.</p>
-            </a>
-          </NextLink>
-          <NextLink href="/stitches/nanobundle" passHref>
-            <a className={styles.card}>
-              <h2>Stitches Nanobundle &rarr;</h2>
-              <p>Build with @wbpesmnt/stitches-nano.</p>
-            </a>
-          </NextLink>
-          <NextLink href="/stitches/parcel" passHref>
-            <a className={styles.card}>
-              <h2>Stitches Parcel &rarr;</h2>
-              <p>Build with @wbpesmnt/design-parcel.</p>
-            </a>
-          </NextLink>
         </div>
       </main>
 

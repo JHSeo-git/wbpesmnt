@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@wbpesmnt/design-token": "workspace:*",
     "next": "latest",
     "next-transpile-modules": "^9.0.0",
     "react": "17.0.2",
