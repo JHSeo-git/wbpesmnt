@@ -3514,7 +3514,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wbpesmnt/design-token@workspace:packages/design-token":
+"@wbpesmnt/design-token@workspace:*, @wbpesmnt/design-token@workspace:packages/design-token":
   version: 0.0.0-use.local
   resolution: "@wbpesmnt/design-token@workspace:packages/design-token"
   dependencies:
@@ -3560,6 +3560,7 @@ __metadata:
   dependencies:
     "@types/node": 17.0.21
     "@types/react": 17.0.40
+    "@wbpesmnt/design-token": "workspace:*"
     eslint-config-next: 12.1.0
     next: latest
     next-transpile-modules: ^9.0.0
